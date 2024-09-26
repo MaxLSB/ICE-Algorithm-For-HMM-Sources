@@ -2,15 +2,7 @@ import numpy as np
 import random as rd
 
 def generer_donnees_Markov(n,mu,sigma,pi,P_hat) :
-    ''' Fonction de génération des données dans le cas où les sources peuvent être modélisées par une chaîne de Markov cachée
-    Parametres
-    ----------
-    n = taille de l'échantillon
-    mu = matrice 1x2 composée de mu0 et mu1 les moyennes des lois conditionnelles à x=0 et x=1 resp.
-    sigma = matrice 1x2 composée de sig0 et sig1 les ecarts-types des lois conditionnelles à x=0 et x=1 resp.
-    pi = proba que r0=0
-    P_hat = matrice 2x2 des probabilités de transition entre les états cachés
-    '''
+    
     r = np.random.rand(n)
     r[0] = r[0] > pi
     x = np.zeros(n)
